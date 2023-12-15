@@ -1,0 +1,187 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+	--text-color: #ffffff;
+	--border-color: #222;
+    --bg-light: #0000008c;
+    --bg-light-hover: #63636366;
+    --bg-dark: #000000d9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'LogoFont';
+	src: url('./DancingScript.ttf');
+}
+
+@font-face {
+	font-family: 'TextFont';
+	src: url('./Roboto-Regular.ttf'),
+	url('./Roboto-Light.ttf'),
+	url('./Roboto-Thin.ttf'),
+	url('./Roboto-Bold.ttf');
+}
+
+body {
+	font-family: 'TextFont';
+	color: var(--text-color);
+	background: url('./Images/bg.jpg');
+	background-size: cover;
+    background-position: center 0%;
+    background-attachment: fixed;
+	backdrop-filter: blur(0px) brightness(0.85);
+}
+
+svg {
+	height: 20px;
+	fill: var(--text-color);
+}
+
+#content {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header {
+	text-align: center;
+	background-color: var(--bg-dark);
+	padding: 15px;
+}
+footer {
+	width: 100%;
+	padding: 15px;
+	background-color: var(--bg-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+.logo {
+	font-size: 5rem;
+	font-family: 'LogoFont';
+	margin-bottom: 15px;
+}
+.btn {
+	font: inherit;
+	font-size: 1.25rem;
+	letter-spacing: 3px;
+	color: var(--text-color);
+	padding: 1em;
+	margin: 0;
+	background: none;
+	border: none;
+	transition: all 0.3s ease-out;
+}
+.btn:hover {
+	transform: translateY(-10px);
+}
+.active {
+	border-bottom: 2px solid var(--text-color);
+}
+
+main {
+	text-align: center;
+	width: 900px;
+	margin: 50px auto;
+	padding: 30px;
+	border: 1px solid var(--border-color);
+	background-color: var(--bg-light);
+	box-shadow: 5px 5px 15px black;
+}
+
+/* ---------------------------------- */
+
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+.home img {
+	height: 300px;
+	width: 300px;
+}
+.home p {
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+/* ---------------------------------- */
+
+.menu{
+	padding-top: 25px;
+	display: grid;
+	grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+	place-items: center;
+	row-gap: 25px;
+}
+
+.card {
+	width: 350px;
+	padding: 2em 1em;
+	background-color: var(--bg-light);
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.25s linear;
+}
+.card:hover {
+	background-color: var(--bg-light-hover);
+}
+.card h1 {
+	font-size: 1.75rem;
+}
+.card p {
+	font-size: 0.95rem;
+	font-weight: 300;
+	padding: 0 40px;
+}
+.card img {
+	width: 200px;
+	border-radius: 25px;
+}
+
+/* ---------------------------------- */
+
+.contact {
+	padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+.contact p {
+	font-size: 1.25rem;
+	margin-left: 120px;
+	align-self: flex-start;
+}
+.contact img {
+	width: 600px;
+}
