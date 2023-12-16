@@ -9,7 +9,7 @@ function createHome() {
     p1.textContent = "Best Sub in the town";
     p2.textContent = "Made with passion since 1968";
     p3.textContent = "Order online or visit us!";
-    image.src = "../src/Images/chef.png";
+    image.src = "./Images/chef.png";
 
     home.appendChild(p1);
     home.appendChild(p2);

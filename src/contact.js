@@ -8,7 +8,7 @@ function createContact() {
 
     p1.textContent = "📞 123 456 789";
     p2.textContent = "🏠 Outer Circle, Connaught Place, Delhi, India";
-    image.src = "../src/Images/map.png";
+    image.src = "./Images/map.png";
     image.alt = "map";
 
     contact.appendChild(p1);
