@@ -111,6 +111,7 @@ main {
 	border: 1px solid var(--border-color);
 	background-color: var(--bg-light);
 	box-shadow: 5px 5px 15px black;
+	/* transition: all 1s linear; */
 }
 
 /* ---------------------------------- */
@@ -120,6 +121,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
+	animation: fadeIn 1.5s;
 }
 .home img {
 	height: 300px;
@@ -138,6 +140,7 @@ main {
 	grid-template: repeat(4, 1fr) / repeat(2, 1fr);
 	place-items: center;
 	row-gap: 25px;
+	animation: fadeIn 1.5s;
 }
 
 .card {
@@ -176,6 +179,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+	animation: fadeIn 1.5s;
 }
 .contact p {
 	font-size: 1.25rem;
@@ -184,4 +188,34 @@ main {
 }
 .contact img {
 	width: 600px;
+}
+
+/* ---------------------------------- */
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* ---------------------------------- */
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(40, 40, 40);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #444;
 }
